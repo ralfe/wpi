@@ -25,7 +25,15 @@ print("----> 3: parsing json")
 
 data = response.json()
 
+main = data['main']
+
+tempMin = main['temp_min']
+
 print(json.dumps(data, sort_keys=True, indent=4, separators=(',', ': ')))
+
+print()
+print()
+print("Aktuelle Temperatur Ulm: ", tempMin)
 
 
 
