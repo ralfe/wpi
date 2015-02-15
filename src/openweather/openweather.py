@@ -3,9 +3,8 @@ __author__ = 'renderle'
 import logging
 import json
 
-
-from src import restcall
-from src.openweather.OpenWeatherParser import OpenWeatherParser
+import restcall
+from openweather.OpenWeatherParser import OpenWeatherParser
 
 def __evaluateTemp(temp):
     base = 15
