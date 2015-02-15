@@ -1,6 +1,6 @@
 __author__ = 'renderle'
 
-from src import restcall
+import restcall
 
 def getForecastValue():
     #data = restcall.doReq("http://www.wunderground.com", "")
