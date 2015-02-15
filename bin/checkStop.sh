@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo python ../src/mainStop.py
+sudo python3 ../src/mainStop.py
