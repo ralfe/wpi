@@ -60,3 +60,4 @@ docs/_build/
 target/
 
 examples/api_keys.md
+src/stop.log
