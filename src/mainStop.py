@@ -18,8 +18,8 @@ def breakEvenReachedFor(value):
 print("script mainStop.py started")
 
 # get weather forceast's
-wundergroundData = openweather.getForecastValue()
-openweatherData = wunderground.getForecastValue()
+openweatherData = openweather.getForecastValue()
+wundergroundData = wunderground.getForecastValue()
 
 # scramble all that values
 scrambledValue = forecastCalculator.scrambleForecast(wundergroundData, openweatherData)
