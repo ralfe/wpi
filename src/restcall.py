@@ -6,6 +6,7 @@ import json
 
 def doReq(url, data):
     response = requests.get(url, params=data)
+    print(response)
     data = response.json()
 
     #print("----> 2: WeatherData response")
