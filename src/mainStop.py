@@ -1,8 +1,8 @@
 import logging
 
-from src.openweather import openweather
-from src.wunderground import wunderground
-from src import forecastCalculator
+from openweather import openweather
+from wunderground import wunderground
+import forecastCalculator
 
 __author__ = 'renderle'
 
