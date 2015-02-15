@@ -32,11 +32,11 @@ def __evaluateOverallSituation(overallSituationId):
     base = 10
 
     idMap = {
-        800 : 30,
-        801 : 15,
-        802 : 5,
-        803 : 0,
-        804 : -5,
+        800 : 30, #  clear sky
+        801 : 15, #  few clouds
+        802 : 5,  #  scattered clouds
+        803 : 0,  #  broken clouds
+        804 : -5, #  overcast clouds
     }
 
     mappingValue = idMap[overallSituationId]

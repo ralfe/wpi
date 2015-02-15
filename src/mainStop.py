@@ -28,6 +28,7 @@ if breakEvenReachedFor(scrambledValue):
 else:
     logging.info("BreakEven not reached")
 
+logging.info("Aggregated data %s", scrambledValue)
 print("Aggregated data", scrambledValue)
 
 
