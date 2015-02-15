@@ -4,7 +4,7 @@ import logging
 import json
 
 import restcall
-import OpenWeatherParser
+from openweather.OpenWeatherParser import OpenWeatherParser
 
 def __evaluateTemp(temp):
     base = 15
