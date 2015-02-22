@@ -3,10 +3,11 @@ import logging
 from openweather import openweather
 from wunderground import wunderground
 import forecastCalculator
+import RPi.GPIO as GPIO
 
 __author__ = 'renderle'
 
-logging.basicConfig(filename='stop.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
+logging.basicConfig(filename='/home/renderle/stop.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 
 # current breakEven value to toggle WP
@@ -25,10 +26,14 @@ wundergroundData = wunderground.getForecastValue()
 scrambledValue = forecastCalculator.scrambleForecast(wundergroundData, openweatherData)
 
 # check if we reached the breakeven point
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(17, GPIO.OUT)
 if breakEvenReachedFor(scrambledValue):
     logging.info("BreakEven reached - scrambled value was %s", scrambledValue)
+    GPIO.output(17, GPIO.HIGH)
 else:
     logging.info("BreakEven not reached - scrambled value was %s", scrambledValue)
+    GPIO.output(17, GPIO.LOW)
 
 logging.info("---------------------------------------------END-------------------------------------------------------------")
 logging.info("")
