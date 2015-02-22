@@ -29,11 +29,13 @@ scrambledValue = forecastCalculator.scrambleForecast(wundergroundData, openweath
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11, GPIO.OUT)
 if breakEvenReachedFor(scrambledValue):
+    print("break even reached")
     logging.info("BreakEven reached - scrambled value was %s", scrambledValue)
-    GPIO.output(17, GPIO.HIGH)
+    GPIO.output(17, GPIO.LOW)
 else:
+    print("break even not reached")
     logging.info("BreakEven not reached - scrambled value was %s", scrambledValue)
-    GPIO.output(11, GPIO.LOW)
+    GPIO.output(11, GPIO.HIGH)
 
 logging.info("---------------------------------------------END-------------------------------------------------------------")
 logging.info("")

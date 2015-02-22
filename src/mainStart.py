@@ -11,7 +11,7 @@ print("script mainStart.py started")
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11, GPIO.OUT)
 logging.info("Start WP")
-GPIO.output(11, GPIO.LOW)
+GPIO.output(11, GPIO.HIGH)
 logging.info("")
 print("script mainStart.py stopped - good bye")
 
