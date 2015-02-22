@@ -11,7 +11,7 @@ logging.basicConfig(filename='/home/renderle/stop.log', level=logging.DEBUG, for
 
 
 # current breakEven value to toggle WP
-breakEven = 50;
+breakEven = 40;
 
 def breakEvenReachedFor(value):
     return value > breakEven
