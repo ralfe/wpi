@@ -26,8 +26,8 @@ wundergroundData = wunderground.getForecastValue()
 scrambledValue = forecastCalculator.scrambleForecast(wundergroundData, openweatherData)
 
 # check if we reached the breakeven point
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(17, GPIO.OUT)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(17, GPIO.OUT)
 if breakEvenReachedFor(scrambledValue):
     logging.info("BreakEven reached - scrambled value was %s", scrambledValue)
     GPIO.output(17, GPIO.HIGH)
